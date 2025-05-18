@@ -1,0 +1,10 @@
+.blog-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.blog-grid:first-child {
+  grid-column: span 2; /* or grid-column: 1 / 3; */
+}
