@@ -6,9 +6,13 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Blogs from "./components/Blogs";
+
 import { Toaster } from "sonner";
 import NavBar from "./components/NavBar";
+
+import Home from "./components/Home";
+import Detailed from "./components/detailed";
+import CreateBlog from "./components/CreateBlog";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +36,25 @@ const router = createBrowserRouter([
     element: (
       <div>
         <NavBar />
-        <Blogs />
+        <Home />
+      </div>
+    ),
+  },
+  {
+    path: "/blog/:id",
+    element: (
+      <div>
+        <NavBar />
+        <Detailed />
+      </div>
+    ),
+  },
+  {
+    path: "create",
+    element: (
+      <div>
+        <NavBar />
+        <CreateBlog />
       </div>
     ),
   },

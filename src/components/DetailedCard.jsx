@@ -22,7 +22,7 @@ const DetailedCard = ({ title, author, body, category, description }) => {
       {/* Body Text */}
       <div className="text-gray-800 space-y-4">
         <p>{description}</p>
-        <p>{body}</p>
+        <p dangerouslySetInnerHTML={{ __html: body }}></p>
       </div>
     </div>
   );

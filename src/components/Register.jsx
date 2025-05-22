@@ -10,12 +10,14 @@ import {
 } from "@/components/ui/card";
 import Select from "react-select";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [preferredTags, setPreferredTags] = useState([]);
+  let navigate = useNavigate();
 
   const options = [
     { value: "Technology", label: "Technology" },
@@ -45,6 +47,7 @@ const Register = () => {
         }
       );
       console.log("Registration successful:", response.data);
+      navigate("/login");
     } catch (error) {
       console.error(
         "Registration failed:",

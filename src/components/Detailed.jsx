@@ -28,7 +28,7 @@ const Detailed = () => {
     <DetailedCard
       title={blog.title}
       category={blog.tags[0]}
-      author={blog.author[0].username}
+      author={blog.author.username}
       body={blog.body}
       description={blog.description}
     />
